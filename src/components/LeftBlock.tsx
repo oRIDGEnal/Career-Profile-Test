@@ -9,7 +9,12 @@ const LeftBlock = () => {
         <Card>
             <CardContent className="p-6">
                 <div className="flex flex-col items-center">
-                    <UserDetails />
+                <UserDetails
+                    name="Siyabonga Ngcobo"
+                    location="Durban, ZA"
+                    hourlyRate={750}
+                    imageSrc="/images/photo.jpg"
+                />
                     <Socials />
                     <ContactButton />
                 </div>
