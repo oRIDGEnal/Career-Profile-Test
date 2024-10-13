@@ -7,8 +7,8 @@ const AboutMe = () => {
             <h2 className="text-xl font-semibold">About Me</h2>
             <p className="mt-2 text-muted-foreground">
               I'm a passionate web developer with over 5 years of experience in creating responsive and user-friendly
-              websites. My expertise lies in front-end development, but I'm also proficient in back-end technologies.
-              I love taking on challenging projects and delivering high-quality results.
+              websites. My expertise lies in front-end development, but I also dabble in back-end technologies. I love
+              taking on challenging projects and delivering high-quality results.
             </p>
         </CardContent>
     </Card>

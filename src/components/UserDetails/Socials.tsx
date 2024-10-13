@@ -7,7 +7,8 @@ const Socials = () => {
         {SocialsData.map((social: any) => (
             <a 
                 key={social.id} 
-                href={social.link} 
+                href={social.link}
+                target="_blank"
             >
                 <Button size="icon" variant="outline">
                     <social.icon  size={"icon"} className="h-4 w-4" />

@@ -4,7 +4,7 @@ const UserDetails = () => {
   return (
     <>
         <img
-            src={"#"}
+            src="images/photo.jpg"
             alt="Profile Picture"
             width={150}
             height={150}

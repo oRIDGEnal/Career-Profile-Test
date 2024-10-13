@@ -28,26 +28,27 @@ export const SocialsData: IIcon[] = [
     {
         id: "twitter",
         icon: FaTwitter,
-        link: "#"
+        link: "https://twitter.com/ridge_n"
     },
     {
         id: "linkedin",
         icon: FaLinkedin,
-        link: "#"
+        link: "https://www.linkedin.com/in/siya-r-ngcobo/"
     },
     {
         id: "github",
         icon: FaGithub,
-        link: "#"
+        link: "https://github.com/oRIDGEnal/"
     },
     {
         id: "website",
         icon: FaGlobe,
-        link: "#"
+        link: "https://siyangcobo.co.za/"
     }
 ]
 
-export const Skills: ISkills[] = [
+// Skills
+export const SkillsData: ISkills[] = [
     {
         id: "React",
         label: "React"
@@ -55,6 +56,10 @@ export const Skills: ISkills[] = [
     {
         id: "JavaScript",
         label: "JavaScript"
+    },
+    {
+        id: "Typescript",
+        label: "Typescript"
     },
     {
         id: "HTML5",

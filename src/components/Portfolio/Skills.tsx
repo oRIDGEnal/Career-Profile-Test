@@ -1,5 +1,5 @@
 import { Card, CardContent } from '../ui/card'
-import { Skills as SkillsData } from '../../utils/constants'
+import { SkillsData } from '../../utils/constants'
 import { Badge } from '../ui/badge'
 
 const Skills = () => {
@@ -9,7 +9,12 @@ const Skills = () => {
             <h2 className="text-xl font-semibold">Skills</h2>
             <div className="mt-2 flex flex-wrap gap-2">
                 {SkillsData.map((skill) => (
-                    <Badge key={skill.id} className="text-xs font-medium">{skill.label}</Badge>
+                    <Badge 
+                        key={skill.id} 
+                        className="text-xs font-medium bg-[#6F5060] hover:bg-[#A78682] cursor-pointer"
+                    >
+                        {skill.label}
+                    </Badge>
                 ))}
             </div>
         </CardContent>
