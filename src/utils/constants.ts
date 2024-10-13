@@ -14,6 +14,12 @@ interface IIcon {
     link: string;
 }
 
+interface IProject {
+    id: number;
+    imageUrl: string;
+    title: string;
+  }
+
 interface ISkills {
     id: string;
     label: string;
@@ -90,3 +96,26 @@ export const SkillsData: ISkills[] = [
         label: "Responsive Design"
     }
 ]
+
+export const ProjectData: IProject[] = [
+    { 
+        id: 1, 
+        imageUrl: '/images/project1.jpg', 
+        title: 'Project 1' 
+    },
+    { 
+        id: 2, 
+        imageUrl: '/images/project2.jpg', 
+        title: 'Project 2' 
+    },
+    { 
+        id: 3, 
+        imageUrl: '/images/project3.jpg', 
+        title: 'Project 3' 
+    },
+    { 
+        id: 4, 
+        imageUrl: '/images/project4.jpg', 
+        title: 'Project 4' 
+    },
+];

@@ -1,18 +1,34 @@
-import { Card, CardContent } from '../ui/card'
+import React from 'react';
+import { Card, CardContent } from '../ui/card';
 
-const AboutMe = () => {
-  return (
-    <Card>
-        <CardContent className="p-6">
-            <h2 className="text-xl font-semibold">About Me</h2>
-            <p className="mt-2 text-muted-foreground">
-              I'm a passionate web developer with over 5 years of experience in creating responsive and user-friendly
-              websites. My expertise lies in front-end development, but I also dabble in back-end technologies. I love
-              taking on challenging projects and delivering high-quality results.
-            </p>
-        </CardContent>
-    </Card>
-  )
+interface AboutMeProps {
+  title?: string;
+  content: string;
 }
 
-export default AboutMe
+/**
+ * AboutMe Component
+ * 
+ * This component displays an "About Me" section within a Card component.
+ * It includes a title and a paragraph of content describing the user.
+ * 
+ * @param {Object} props
+ * @param {string} [props.title="About Me"] - The title of the section
+ * @param {string} props.content - The content of the About Me section
+ * 
+ * @returns {JSX.Element} A Card component containing the About Me information
+ */
+const AboutMe: React.FC<AboutMeProps> = ({ title = "About Me", content }) => {
+  return (
+    <Card>
+      <CardContent className="p-6">
+        <h2 className="text-xl font-semibold" id="about-me-title">{title}</h2>
+        <p className="mt-2 text-muted-foreground" aria-labelledby="about-me-title">
+          {content}
+        </p>
+      </CardContent>
+    </Card>
+  );
+};
+
+export default AboutMe;
