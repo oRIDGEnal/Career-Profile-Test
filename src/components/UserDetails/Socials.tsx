@@ -1,20 +1,25 @@
-import { SocialsData } from "../../utils/constants"
+import { FreelancerProfile, SocialLink } from "../../utils/types"
+import profileData from "../../utils/freelancerProfile.json"
 import { Button } from "../ui/button"
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
-const Socials = () => {
+const Socials:React.FC = () => {
+  const profile: FreelancerProfile = profileData as FreelancerProfile;
+  const socialLinks = profile.profile.social_links;
+  const platformIcons: Record<string, JSX.Element> = {
+    linkedin: <FaLinkedin size={16} />,
+    github: <FaGithub size={16} />
+  };
+
   return (
     <div className="mt-4 flex space-x-2">
-        {SocialsData.map((social: any) => (
-            <a 
-                key={social.id} 
-                href={social.link}
-                target="_blank"
-            >
+        {socialLinks.map((social: SocialLink) => (
+            <a key={social.id} href={social.url} target="_blank" rel="noreferrer">
                 <Button size="icon" variant="outline">
-                    <social.icon  size={"icon"} className="h-4 w-4" />
+                    {platformIcons[social.platform.toLowerCase()]}
                 </Button>
             </a>
-        ))}
+      ))}
     </div>
   )
 }
